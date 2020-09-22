@@ -1,0 +1,23 @@
+; MAX/MIN v2: 194.24 cycles - 19 instructions
+	B=20
+	C=B,A=IN1
+	D=B=A
+main:
+	JMPF continue
+	B=A
+continue:
+	A=B,B=A
+	A=D,D=A
+	A=B,B=A
+	F=NEG(B-A),A=D,D=A
+	A=B,B=A
+	A=D,D=A,JMPT increment
+	D=A
+increment:
+	A=IN1
+	F=NEG(B-A),DECNZ main
+	A=B
+	W=A
+	OUT1=W,A=D
+	W=A
+	OUT1=W

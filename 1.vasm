@@ -1,0 +1,7 @@
+; SUM & DIFFERENCE v1:  92.00 cycles - 5 instructions
+	A=IN1
+	B=A,A=IN2
+main: 
+	W=A+B
+	OUT1=W,W=B-A,A=IN1
+	B=A,OUT2=W,A=IN2,JMP main

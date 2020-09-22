@@ -1,0 +1,6 @@
+; RUNNING TOTAL v1:  42.00 cycles - 4 instructions
+	A=IN1
+	W=A
+main:
+	OUT1=W,B=W=A+B,A=IN1
+	OUT2=W,W=A,JMP main

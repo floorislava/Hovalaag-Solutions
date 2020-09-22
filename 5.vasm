@@ -1,0 +1,18 @@
+; RUN-LENGTH DECODER v4: 159.28 cycles - 14 instructions
+start:
+	A=IN2
+	B=A
+	F=POS(B)
+	JMPT pos_loop,C=B
+	B=-A,A=IN1
+	C=B,W=A
+neg_loop:
+	F=ZERO(C)
+	JMPT start,DEC
+	OUT1=W,JMP neg_loop
+pos_loop:
+	F=ZERO(C)
+	JMPT start,DEC
+	A=IN1
+	W=A
+	OUT1=W,JMP pos_loop

@@ -1,0 +1,23 @@
+; PATTERN DETECTOR v2: 188.09 cycles - 20 instructions
+	A=IN1
+start:
+	B=4
+	F=ZERO(B-A)
+	JMPF fail
+	A=0
+	W=A
+	OUT1=W,A=IN1,B=5
+	F=ZERO(B-A)
+	JMPF start
+	A=0
+	W=A
+	OUT1=W,A=IN1,B=1
+	F=ZERO(B-A)
+	JMPF start
+	A=B
+	W=A
+	OUT1=W,A=IN1,JMP start
+fail:
+	A=0
+	W=A
+	OUT1=W,A=IN1,JMP start
