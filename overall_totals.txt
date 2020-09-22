@@ -1,0 +1,7 @@
+Totals:
+
+1 - SUM & DIFFERENCE v1:  	92.00 cycles 	5 instructions
+2 - RUNNING TOTAL v1:  		42.00 cycles 	4 instructions
+3 - MAX/MIN v2: 			194.24 cycles 	19 instructions
+4 - PATTERN DETECTOR v2: 	188.09 cycles 	20 instructions
+5 - RUN-LENGTH DECODER v4: 	159.28 cycles 	14 instructions
